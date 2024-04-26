@@ -49,9 +49,10 @@ body {
 }
 
 h1 {
-    font-family: 'Alternative', sans-serif;
-    line-height: .6;
-    font-size  : 54rem;
+    font-family   : 'Alternative', sans-serif;
+    line-height   : .6;
+    font-size     : 48rem;
+    letter-spacing: 1rem;
 }
 
 h2 {
@@ -86,6 +87,12 @@ span {
     font-family   : 'Alternative', sans-serif;
     font-size     : 4.8rem;
     text-transform: uppercase;
+    display       : inline-flex;
+}
+
+.slash {
+    color      : var(--alternate);
+    font-weight: 300;
 }
 
 .nav-menu-button {
@@ -199,4 +206,44 @@ span {
 
 .menu-row-title {
     display: inline-flex;
+}
+
+
+/**MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: max(100vw / 768 * 10);
+    }
+
+    h1 {
+        font-size: 30rem;
+    }
+
+    span {
+        font-size: 2.4rem;
+    }
+
+    .hero-row-title {
+        font-size: 8rem;
+    }
+
+    .menu {
+        padding-top: 18rem;
+    }
+
+    .menu-row:nth-child(1) {
+        padding-left : 0;
+        padding-right: 0;
+    }
+
+    .menu-row-info {
+        display       : flex;
+        flex-direction: column;
+        gap           : 2rem;
+    }
+
+    .menu-row-media {
+        display: none;
+    }
 }
